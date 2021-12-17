@@ -1,2 +1,1 @@
-# -web-fundamentals
- Web fundamentals
+Web fundamentals exercises
