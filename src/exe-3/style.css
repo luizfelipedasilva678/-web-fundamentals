@@ -56,8 +56,14 @@ table {
     border-bottom: solid 1px #b6b6b6;
 }
 
+.main-container__ul li {
+    position: relative;
+}
+
 .main-container__ul {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-container__ul a{
@@ -76,9 +82,10 @@ table {
     position: absolute;
     background: #b4b4b4;
     left: 95px;
+    top: 5px;
 }
 
-.main-container__ul a:last-of-type li::after {
+.main-container__ul  li:last-of-type::after {
     display: none;
 }
 
@@ -138,4 +145,54 @@ table {
 
 .main-container__main_content {
     width: 70%;
+}
+
+.main-container__aside_header {
+    padding: 30px
+}
+
+.main-container__aside_header_infos h2{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.main-container__img-subtitle {
+    background: #fff;
+    width: 100%;
+    padding: 20px 0;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container__img-subtitle img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.main-container__img-container {
+    max-width: 351px;
+    margin-bottom: 50px;
+    box-shadow: 1px 0px 22px -9px #000000;
+}
+
+.main-container__otherimg-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.main-container__otherimg-container img {
+    margin-right: 15px;
+}
+
+.post-card {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 1px 0px 22px -9px #000000;
+}
+
+.post-card__header {
+    display: flex;
+    justify-content: space-between;
 }
