@@ -81,6 +81,11 @@ table {
     position: relative;
 }
 
+.main-container__ul a:hover {
+    color: #3D9DD4;
+    transition: .1s;
+}
+
 .main-container__ul li::after {
     content: "";
     width: 1px;
@@ -126,10 +131,14 @@ table {
     border-right: 1px solid #b4b4b4;
 }
 
+.btn-default i {
+    color: #b4b4b4;
+}
+
 .btn-post {
     background-color: transparent;
     border: 0;
-    box-shadow: inset 0 0 0 1px rgb(160 160 160 / 30%);
+    border: solid 1px #292929;
     color: #3c3b3b;
     cursor: pointer;
     font-size: 0.6em;
@@ -144,8 +153,20 @@ table {
     white-space: nowrap;
 }
 
+.btn-post:hover {
+    color: #3D9DD4;
+    border-color: #3D9DD4;
+    transition: .1s;
+}
+
 .btn-default img {
     width: 15px;
+}
+
+.main-container__aside_header_infos p a {
+    text-decoration: none;
+    color: #646464; 
+    border-bottom: dotted 1px rgb(199, 199, 199);
 }
 
 .main-container__actions {
@@ -264,7 +285,7 @@ table {
 .main-container__otherimg-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
@@ -438,6 +459,11 @@ table {
     padding-right: 30px;
 }
 
+.post-card__stats a:hover {
+    color: #3D9DD4;
+    transition: .1s;
+}
+
 .post-card__stats p {
     padding-right: 30px;
     border-right: solid 1px rgba(160, 160, 160, 0.3);
@@ -511,7 +537,7 @@ table {
 }
 
 .pagination {
-    padding: 1.5em 0;
+    padding: 1.5em  0 7em 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -524,4 +550,11 @@ table {
 .pagination .disabled {
     pointer-events: none;
     color: rgba(160, 160, 160, 0.3) !important;
+    border-color: rgba(160, 160, 160, 0.3);
+}
+
+@media (max-width: 1366px) {
+    .main-container__aside{
+        margin-left: 30px;
+    }
 }
