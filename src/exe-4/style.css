@@ -88,12 +88,12 @@ body {
     text-align: center;
 }
 
-.header__menu ul {
+.header__menu {
     display: flex;
     margin-top: 50px;
 }
 
-.header__menu ul li a {
+.header__menu li a {
     text-decoration: none;
     color: var(--grey);
     font-size: 20px;
@@ -101,7 +101,7 @@ body {
     text-transform: uppercase;
 }
 
-.header__menu ul li a:hover {
+.header__menu li a:hover {
     color: var(--white);
     border: solid 1px var(--white);
     border-radius: 40px;
