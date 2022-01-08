@@ -138,7 +138,7 @@ table {
 .btn-post {
     background-color: transparent;
     border: 0;
-    border: solid 1px #292929;
+    /*border: solid 1px #292929;*/
     color: #3c3b3b;
     cursor: pointer;
     font-size: 0.6em;
