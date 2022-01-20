@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Questão 3</h1>
+
+    <p>Faça um programa para obter a 
+    soma de todos os números pares positivos até 1000</p>
+    
+    <br>
+    <br>
+
+    <a href="luizfelipedasilva678.github.io/web-fundamentals/lab01/questao3.html">Código fonte</a>
+
+    <script>
+        function somaAte1000() {
+            soma = 0;
+
+            for(let i = 0; i <= 1000; i++) {
+                if(i % 2 === 0) {
+                    soma += i;
+                }
+            }
+
+            return soma;
+        }
+
+        document.write("Resultado " + somaAte1000());
+    </script>   
+</body>
+</html>

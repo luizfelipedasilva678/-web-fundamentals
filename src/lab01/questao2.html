@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potência</title>
+</head>
+<body>
+    <h1>Questão 2</h1>
+
+    <p>Faça um programa que imprima 30 primeiras potências de 4, 
+    ou seja, 4 elevado a 1, 4 elevado a 2 etc.</p>
+    
+    <br>
+    <br>
+
+    <a href="luizfelipedasilva678.github.io/web-fundamentals/lab01/questao2.html">Código fonte</a>
+    
+    <script>
+        function potencia(number, n) {
+            if(n == 0){
+                return 1;
+            } else {
+                return number * potencia(number, n-1);
+            }
+        }
+        
+        for(let i = 0; i <= 30; i++) {
+            document.write(potencia(4,i) + '<br>');
+        }
+    </script>
+</body>
+</html>

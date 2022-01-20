@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <h1>Questão 4</h1>
+
+    <p>Faça um programa que calcule e imprima os 100 primeiros números da sequência de Fibonacci, definida 
+    por: A1 = 1; A2 = 2; A3 = 1 + 2 = A1 + A2; An = An-1 + An-2 (n>=3)</p>
+    
+    <br>
+    <br>
+
+    <a href="luizfelipedasilva678.github.io/web-fundamentals/lab01/questao4.html">Código fonte</a>
+
+    <script>
+        function fibonacci(n) {
+           next  =  1;
+           prev  =  0;
+
+            if(n == 0 || n == 1) {
+                return n;
+            }
+            else {
+                for(i = 0; i < n; i++)
+                {
+                    next  =  next + prev;
+                    prev  =  next - prev;
+                }
+            }
+
+            return prev;
+        }
+
+        document.write("Resultado " + fibonacci(100));
+    </script>
+</body>
+</html>

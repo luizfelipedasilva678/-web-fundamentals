@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatorial</title>
+</head>
+<body>
+    <h1>Questão 1</h1>
+
+    <p>Faça um programa que calcule o fatorial de um número qualquer. O fatorial de um número N é 
+    igual ao produto N x (N-1) x (N-2) ... x 1. 
+    Para testar sua solução, seu programa deve calcular e 
+    imprimir o fatorial de 12.</p>
+
+    Resposta -> <p style="display: inline;" class="fatorial"></p>
+
+    <br>
+    <br>
+
+    <a href="luizfelipedasilva678.github.io/web-fundamentals/lab01/questao1.html">Código fonte</a>
+
+    <script>
+        function fatorial(a) {
+            if(a == 0) {
+                return 1;
+            } else {
+                return a * fatorial(a-1);
+            }   
+        }
+        document.querySelector('.fatorial').innerHTML = fatorial(12);
+    </script>
+</body>
+</html>
