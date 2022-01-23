@@ -1,5 +1,5 @@
 (function() {
-    let frase, frase2, txt, txt2, txt3, data;
+    let frase, frase2, frase3, txt, txt2, txt3, data, data2, data3, data4;
     
     
     window.addEventListener('click', function(e) {
@@ -35,6 +35,36 @@
         if(e.target.id === 'btn-questao6') {
             data = document.querySelector('#questao6').value;
             document.querySelector('#questao6-resp').innerHTML = "Você viveu " + calculaTempoDeVida(data); ;
+        }
+
+        if(e.target.id === 'btn-questao7') {
+            data2 = document.querySelector('#questao7').value; 
+            document.querySelector('#questao7-resp').innerHTML = "Data por extenso " + transformaData(data2);
+        }
+
+        if(e.target.id === 'btn-questao8') {
+            data3 = document.querySelector('#questao8').value;
+            data4 = document.querySelector('#questao8-outra-data').value;
+            document.querySelector('#questao8-resp').innerHTML = "Distância entre as data " + distanciaEntreDatas(data3, data4);
+        }
+
+        if(e.target.id === 'btn-questao10') {
+            frase3 = document.querySelector('#questao10').value;
+            document.querySelector('#questao10-resp').innerHTML = 'Frase codificada ' + tenisPolar(frase3);
+        }
+    })
+
+    document.getElementById('questao9').addEventListener('keydown', function(e) {
+        const value = e.target.value;
+        const target = e.target;
+        console.log(target.value);
+
+        if(value.match(/^[a-z]+$/g) || value.match(/^[A-Z]+$/g)) {
+            target.style.borderColor = 'red';
+        } else if(value.match(/^[A-Za-z]+$/g)) {
+            target.style.borderColor = 'yellow';
+        } else {
+            target.style.borderColor = 'green';
         }
     })
 })();
@@ -122,7 +152,65 @@ function calculaTempoDeVida(data) {
     return years;
 }
 
+function transformaData(data) {
+    arrayData = data.split('/');
 
+    const datas = [
+        "de janeiro",
+        "de fevereiro",
+        "de maço",
+        "de abril",
+        "de maio",
+        "de junho",
+        "de julho",
+        "de agosto",
+        "de setembro",
+        "de outubro",
+        "de novembro",
+        "de dezembro"
+    ]
+    
+    for(let i = 0; i < datas.length; i++) {
+        if(Number(arrayData[1]) === i + 1) {
+            arrayData[1] = datas[i];
+        }
+    }
+    arrayData[2] = 'de ' + arrayData[2];
 
+    return arrayData.join(' ');
+}
 
+function distanciaEntreDatas(dataIncial, dataFinal) {
+    const initialDate = dataIncial.split('/');
+    const finalDate = dataFinal.split('/');
+    const weeks = new Date(finalDate[2], finalDate[1], finalDate[0]) - new Date(initialDate[2], initialDate[1], initialDate[0]);
+    console.log(weeks)
+    return "Semanas " + Math.floor((((weeks/1000)/60)/60)/168);
+}   
 
+function tenisPolar(frase) {
+    let arrayFrase = frase.toLowerCase().split('');
+
+    for(let i = 0; i < arrayFrase.length; i++) {
+        arrayFrase[i] = trocaLetra(arrayFrase[i]);
+    }
+
+    return arrayFrase.join('');
+}
+
+function trocaLetra(letra) {
+    const tenis = ['t', 'e', 'n', 'i', 's'];
+    const polar = ['p', 'o', 'l', 'a', 'r'];
+
+    for (let i = 0; i < 5; i++) {
+        if(letra === tenis[i]) {
+            return polar[i];
+        }
+
+        if(letra === polar[i]) {
+            return tenis[i];
+        }
+    }
+
+    return letra;
+}
