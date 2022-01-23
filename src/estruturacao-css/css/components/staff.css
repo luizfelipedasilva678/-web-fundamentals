@@ -1,0 +1,53 @@
+.staff { 
+    justify-content:space-between;
+    background-color:var(--blue);
+    color: #fff;
+}
+
+.staff h2, .staff p {
+    width: 100%;
+    text-align: center;
+}
+
+.staff h2 {
+    margin:20px;
+}
+
+.staff > p {
+    margin-bottom: 80px;
+}
+
+.staff div {
+    padding: 50px 30px;
+    border: 1px solid #aaa;
+}
+
+.staff img{
+    border-radius:50%;
+}
+
+.staff h3 {
+    margin: 30px 0 10px;
+}
+.staff p {
+    color:#ddd;
+}
+
+.staff img:hover {
+    transform: rotate(360deg);
+    transition: transform 1s linear;
+    
+}
+
+@media (max-width: 1120px) {
+    .staff div {
+        padding: 50px 80px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .staff {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,66 @@
+header {
+    background-image: url(../../images/banner.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height:400px;
+    border-top: 10px solid var(--blue);
+}
+
+header .btn-menu-mob {
+    display: none;
+    list-style:none;
+    justify-content: space-between;
+    width: 50px;
+    position:absolute;
+    top: 80px;
+    right: 50px;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header container-menu_ul {
+    position: relative;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header ul {
+    display:flex;
+    list-style:none;
+    justify-content: space-between;
+    width:200px;
+    position:absolute;
+    top: 80px;
+    right: 50px;
+}
+
+header h3 {
+    position:absolute;
+    top: 80px;
+    left: 50px;
+}
+
+header h1 {
+    text-align: center;
+    position:relative;
+    top:160px;
+}
+
+header p {
+    position:relative;
+    top:180px;
+}
+
+@media (max-width: 1120px) {
+    .menu {
+        display: none;
+    }
+
+    header .btn-menu-mob {
+        display: block;
+    }
+}

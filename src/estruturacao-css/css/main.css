@@ -1,0 +1,11 @@
+@import '../css/utils/variables.css';
+
+@import '../css/base/reset.css';
+@import '../css/base/typography.css';
+
+@import '../css/components/footer.css';
+@import '../css/components/header.css';
+@import '../css/components/news.css';
+@import '../css/components/products.css';
+@import '../css/components/staff.css';
+@import '../css/components/menu-mobile.css';

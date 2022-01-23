@@ -1,0 +1,37 @@
+.products {
+    justify-content:space-between;
+}
+
+.products h2, .products > p {
+    width: 100%;
+    text-align: center;
+}
+
+.products div {
+    width: 450px;
+    margin: 25px;
+}
+
+.products img {
+    width:100%;
+}
+.products h2 {
+    margin:20px;
+}
+.products > p {
+    margin-bottom: 80px;
+}
+
+.products h3 {
+    margin:20px 0;
+}
+
+.products div p {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1120px) {
+    .products div {
+        width: 100%;
+    }
+}
