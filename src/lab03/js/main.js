@@ -9,8 +9,7 @@
                 url: "data/filmes.json", 
                 success: function(result) {
                     const cards = makeMovieCards(result.data);
-                    cards.join('');
-                    main.innerHTML = cards;
+                    main.innerHTML = cards.join('');
                 }
             }   
         );
